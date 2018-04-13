@@ -21,12 +21,12 @@
             var input = document.getElementById('input-number');
             var power = document.querySelector('input[name=power]:checked');
             var exponent = power.value;
-            
-            
             var x = input.value;
+
+            var answer = Math.pow(x, power.value);
+
             console.log(x, 'is the number you entered.');
-            var square = Math.pow(x, power.value);
-            console.log(x, 'to the', exponent, 'power is', square);
+            console.log(x, 'to the', exponent, 'power is', answer);
         }
         //getSquare();
 
