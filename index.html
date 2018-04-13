@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Day 4 App</title>
+
+<style>
+#result{
+
+border: 3px solid grey;
+margin: 10px;
+padding: 10px;
+background-color: yellow;
+}
+
+
+</style>
 </head>
 <body>
     <h1>On a new branch.</h1>
@@ -16,6 +28,11 @@
     <input id="input-number" type="number">
     <button onclick="getSquare()">Get Square</button>
 
+    <div id="result">
+
+
+    </div>
+
     <script>
         function getSquare() {
             var input = document.getElementById('input-number');
@@ -25,8 +42,12 @@
 
             var answer = Math.pow(x, power.value);
 
+            var result= document.getElementById('result');
+
+            result.innerHTML = x + ' to the ' + exponent + ' is ' + answer;
+
             console.log(x, 'is the number you entered.');
-            console.log(x, 'to the', exponent, 'power is', answer);
+            console.log(x, 'to the ', exponent, 'power is', answer);
         }
         //getSquare();
 
